@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-  belongs_to :notes
+  has_many :notes
 end

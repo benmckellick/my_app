@@ -1,3 +1,3 @@
-class notes < ActiveRecord::Base
-  has_many :users
+class Note < ActiveRecord::Base
+  belongs_to :user
 end
