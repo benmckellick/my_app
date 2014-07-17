@@ -2,13 +2,14 @@
 
 <p>
   <strong>User:</strong>
-  <%= @user.user %>
+  <%= @user.name %>
 </p>
 
-<p>
+
   <strong>Notes:</strong>
-  <%= @user.notes %>
-</p>
+  <%= @user.notes.each do |note| %>
+  	<p><%= note.content %></p>
+  <% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
